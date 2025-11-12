@@ -1,0 +1,40 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "Se connecter",
+      "email": "Email",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "signingIn": "Connexion en cours...",
+      "continueWithGoogle": "Continuer avec Google",
+      "orWithEmail": "Ou avec email",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signUpFree": "Inscrivez-vous gratuitement",
+      "error": "Une erreur s'est produite lors de la connexion",
+      "errorGoogle": "Une erreur s'est produite avec Google"
+    },
+    "signUp": {
+      "title": "Créer un compte",
+      "name": "Nom complet",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "passwordHint": "Minimum 8 caractères",
+      "submit": "Créer mon compte",
+      "creating": "Création en cours...",
+      "continueWithGoogle": "Continuer avec Google",
+      "orWithEmail": "Ou avec email",
+      "hasAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "errorGoogle": "Une erreur s'est produite avec Google"
+    },
+    "errors": {
+      "invalidCredentials": "Email ou mot de passe invalide",
+      "emailAlreadyExists": "Un compte existe déjà avec cet email",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "genericError": "Une erreur s'est produite"
+    }
+  }
+}

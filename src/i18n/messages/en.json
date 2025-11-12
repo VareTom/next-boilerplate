@@ -1,0 +1,40 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "Sign In",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "signingIn": "Signing in...",
+      "continueWithGoogle": "Continue with Google",
+      "orWithEmail": "Or with email",
+      "noAccount": "Don't have an account?",
+      "signUpFree": "Sign up for free",
+      "error": "An error occurred during sign in",
+      "errorGoogle": "An error occurred with Google"
+    },
+    "signUp": {
+      "title": "Create an account",
+      "name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "passwordHint": "Minimum 8 characters",
+      "submit": "Create my account",
+      "creating": "Creating...",
+      "continueWithGoogle": "Continue with Google",
+      "orWithEmail": "Or with email",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errorGoogle": "An error occurred with Google"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "emailAlreadyExists": "An account already exists with this email",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "genericError": "An error occurred"
+    }
+  }
+}
