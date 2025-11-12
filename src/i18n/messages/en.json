@@ -36,5 +36,13 @@
       "passwordTooShort": "Password must be at least 8 characters",
       "genericError": "An error occurred"
     }
+  },
+  "landing": {
+    "header": {
+      "login": "Login"
+    },
+    "footer": {
+      "copyright": "2025 Rush Labs"
+    }
   }
 }
