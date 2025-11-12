@@ -1,0 +1,29 @@
+services:
+  test-postgres:
+    image: 'pgvector/pgvector:pg17'
+    container_name: 'test_postgres_boilerplate'
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=boilerplate
+    ports:
+      - '5555:5432'
+    volumes:
+      - ./prepare-db.sql:/docker-entrypoint-initdb.d/prepare-db.sql
+  postgres:
+    image: 'pgvector/pgvector:pg17'
+    container_name: 'postgres_boilerplate'
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=boilerplate
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./prepare-db.sql:/docker-entrypoint-initdb.d/prepare-db.sql
+  mailhog:
+    image: 'mailhog/mailhog'
+    container_name: 'mailhog'
+    ports:
+      - '8025:8025'
+      - '1025:1025'
