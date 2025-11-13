@@ -8,7 +8,7 @@ const resend = new Resend(env.RESEND_API_KEY)
 export async function sendWelcomeEmail(email: string, name: string) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Your App <onboarding@yourdomain.com>',
+      from: 'onboarding@resend.dev',
       to: email,
       subject: 'Welcome to Your App!',
       react: WelcomeEmail({ name }),
@@ -33,7 +33,7 @@ export async function sendVerificationEmail(
 ) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Your App <noreply@yourdomain.com>',
+      from: 'onboarding@resend.dev',
       to: email,
       subject: 'Verify your email address',
       react: VerifyEmail({ name, verificationUrl }),

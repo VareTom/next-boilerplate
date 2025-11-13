@@ -3,6 +3,7 @@ import { prismaAdapter } from 'better-auth/adapters/prisma'
 import { PrismaClient } from '@prisma/client'
 import { openAPI } from 'better-auth/plugins'
 import { env } from '@/lib/env'
+import { sendVerificationEmail } from '@/lib/emails'
 
 const prisma = new PrismaClient()
 
@@ -13,6 +14,15 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     requireEmailVerification: true,
+    sendResetPassword: async ({ user }) => {
+      // Send reset password email
+    },
+  },
+  emailVerification: {
+    sendVerificationEmail: async ({ user, url }) => {
+      console.log('sendVerificationEmail')
+      await sendVerificationEmail(user.email, user.name, url)
+    },
   },
   socialProviders: {
     google: {
@@ -23,4 +33,21 @@ export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,
   plugins: [openAPI()],
+  user: {
+    deleteUser: {
+      enabled: true,
+      sendDeleteAccountVerification: async ({ user }) => {
+        // Send confirmation email
+      },
+    },
+  },
+  databaseHooks: {
+    user: {
+      create: {
+        after: async ({ user }) => {
+          // Send welcome email
+        },
+      },
+    },
+  },
 })
