@@ -10,6 +10,7 @@ const envSchema = z.object({
     .enum(['development', 'test', 'production'])
     .default('development'),
   NEXT_PUBLIC_BETTER_AUTH_URL: z.string().optional(),
+  RESEND_API_KEY: z.string().min(1),
 })
 
 export const env = envSchema.parse({
@@ -20,4 +21,5 @@ export const env = envSchema.parse({
   GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
   NODE_ENV: process.env.NODE_ENV || 'development',
   NEXT_PUBLIC_BETTER_AUTH_URL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
+  RESEND_API_KEY: process.env.RESEND_API_KEY,
 })

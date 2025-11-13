@@ -21,6 +21,7 @@
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@prisma/client": "^6.11.1",
+    "@react-email/components": "^1.0.1",
     "@tanstack/react-query": "^5.83.0",
     "@trpc/client": "^11.4.3",
     "@trpc/next": "^11.4.3",
@@ -33,7 +34,9 @@
     "prisma": "^6.11.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-email": "^5.0.4",
     "react-hook-form": "^7.66.0",
+    "resend": "^6.4.2",
     "superjson": "^2.2.2",
     "tailwind-merge": "^3.3.1",
     "use-intl": "^4.4.0",
